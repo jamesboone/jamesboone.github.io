@@ -1,11 +1,9 @@
 {
   "applinks": {
     "apps": [],
-    "details": [
-      {
+    "details": {
         "appID": "4J63DAL447.com.NFT-World",
         "paths": [*]
       }
-    ]
   }
 }

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d984d895-2523-4036-b2f4-9c36b04f0952" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.html" afterPath="$PROJECT_DIR$/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="669">
-              <caret line="341" column="4" lean-forward="true" selection-start-line="341" selection-start-column="4" selection-end-line="341" selection-end-column="4" />
+            <state relative-caret-position="201">
+              <caret line="274" column="26" lean-forward="true" selection-start-line="274" selection-start-column="26" selection-end-line="274" selection-end-column="26" />
               <folding>
                 <element signature="e#1921#1928#1" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -72,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+            <state relative-caret-position="729">
+              <caret line="197" column="7" lean-forward="true" selection-start-line="197" selection-start-column="7" selection-end-line="197" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -128,8 +127,8 @@
         <option value="$PROJECT_DIR$/contact.html" />
         <option value="$PROJECT_DIR$/apple-app-site-association" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
-        <option value="$PROJECT_DIR$/about.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/about.html" />
       </list>
     </option>
   </component>
@@ -851,18 +850,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="341" column="4" lean-forward="true" selection-start-line="341" selection-start-column="4" selection-end-line="341" selection-end-column="4" />
+        <state relative-caret-position="201">
+          <caret line="274" column="26" lean-forward="true" selection-start-line="274" selection-start-column="26" selection-end-line="274" selection-end-column="26" />
           <folding>
             <element signature="e#1921#1928#1" expanded="true" />
             <element signature="n#style#0;n#span#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -880,6 +871,14 @@
             <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="197" column="7" lean-forward="true" selection-start-line="197" selection-start-column="7" selection-end-line="197" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -41,9 +41,9 @@
 			<div class="row">
 				<div class="col-md-4" style="display: contents;">
 					<div><a href="index.html"><img src="images/logo.png"></a></div>
-					<div>
-						<button id="button">get</button>
-						<a id="anchor" href="#">deep link</a>
+					<div id = "branch_div">
+						<button id="button">Get App</button>
+						<!--<a id="anchor" href="#">deep link</a>-->
 					</div>
 				</div>
 				<div class="col-md-8">
@@ -192,18 +192,57 @@
    }
 </script>
 	<script>
+	document.getElementById("branch_div").style.display="none";
 	// load Branch
 	(function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
 	// init Branch
 	branch.init('key_live_ao8yGfZCwKiZXO1sJ6BmhcfeuEltkwt8', { metadata : { 'langJS' : document.documentElement.lang } } );
+	var linkData = {
+	  campaign: 'content 123',
+	  channel: 'facebook',
+	  feature: 'dashboard',
+	  stage: 'new user',
+	  tags: [ 'tag1', 'tag2', 'tag3' ],
+	  alias: '',
+	  data: {
+	  	'$fallback_url': "www.google.com",
+	  	'$web_only': true,
+		'custom_bool': true,
+		'custom_int': Date.now(),
+		'custom_string': 'hello',
+		'$og_title': 'Title',
+		'$og_description': 'Description',
+		'$og_image_url':'http://lorempixel.com/400/400'
+	  }
+	};
+	<!--branch.banner()-->
+	branch.link(linkData, function(err, link) {
+	  // bind elements
+	  document.getElementById('button').onclick = function() {
+		window.open(link || err);
+	  };
+	  <!--document.getElementById('anchor').href = link || err;-->
+	});
 
-	var listener = function(event, data) { console.log(event, data); }
+	var listener = function(event, data) {
+		console.log(event, data);
+		if (event == 'willShowJourney') {
+			console.log("willShowJourney")
+			document.getElementById("branch_div").style.display="block";
+		} else if (event == 'didShowJourney') {
+			branch.closeJourney()
+			console.log("didShowJourney")
+		}
+	}
 
 	// Specify an event to listen for
-	branch.addListener('willShowJourney', listener);
+	<!--branch.addListener('willShowJourney', listener);-->
+	branch.addListener(listener);
 
-	<!--// Listen for all events-->
-	<!--branch.addListener(listener);-->
+	<!--branch.addListener('willShowJourney', listener);-->
+
+
+
 
 	</script>
 </body>

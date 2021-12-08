@@ -340,16 +340,37 @@
 	(function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
 	// init Branch
 	branch.init('key_live_ao8yGfZCwKiZXO1sJ6BmhcfeuEltkwt8');
-	<!--branch.init('key_live_ao8yGfZCwKiZXO1sJ6BmhcfeuEltkwt8', function(err, data) {-->
-  		<!--if (document.querySelectorAll("meta[name='branch:deeplink:$deeplink_path']").length > 0) {-->
-    		<!--var meta = document.querySelector("meta[name='branch:deeplink:$deeplink_path']").getAttribute("content");-->
-    		<!--branch.setBranchViewData({-->
-      			<!--data:{-->
-        			<!--'$deeplink_path':meta"-->
-      			<!--}-->
-    		<!--});-->
-  		<!--}-->
-	<!--});-->
+	var scrollDistance = Math.abs(window.innerHeight - $(window).innerHeight());
+
+	// register listener on event 'willShowJourney'
+	// function for when listener event triggers
+	branch.addListener('willShowJourney', function(event, data) {
+		console.log(event, data);
+		  <!--document.getElementById("branch-banner-iframe").style.height = "0vh";-->
+		  console.log('journey hidden')
+	})
+
+	var scrolledPastThreshold = false;
+	var journeyShowing = false;
+	window.onscroll = function() {
+		console.log('onScroll');
+		var distanceScrolled = document.documentElement.scrollTop;
+		if (distanceScrolled > scrollDistance) {
+			scrolledPastThreshold = true;
+			if (scrolledPastThreshold && !journeyShowing) {
+				document.getElementById("branch-banner-iframe").style.height = "100vh";
+				journeyShowing = true;
+			}
+		} else if (distanceScrolled < scrollDistance) {
+			scrolledPastThreshold = false;
+				if (!scrolledPastThreshold && journeyShowing) {
+					document.getElementById("branch-banner-iframe").style.height = "0vh";
+					journeyShowing = true;
+				}
+		}
+	}
+
+
 
 	</script>
 

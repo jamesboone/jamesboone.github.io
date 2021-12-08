@@ -215,13 +215,12 @@
 		'$og_image_url':'http://lorempixel.com/400/400'
 	  }
 	};
-	<!--branch.banner()-->
+
 	branch.link(linkData, function(err, link) {
 	  // bind elements
 	  document.getElementById('button').onclick = function() {
 		window.open(link || err);
 	  };
-	  <!--document.getElementById('anchor').href = link || err;-->
 	});
 
 	var listener = function(event, data) {

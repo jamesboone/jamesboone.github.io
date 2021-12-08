@@ -343,14 +343,13 @@
 	var scrollDistance = 400;
 	branch.addListener('willShowJourney', function(event, data) {
 		console.log(event, data);
-		console.log('journey hidden')
 	})
 
 	var scrolledPastThreshold = false;
 	var journeyShowing = false;
 	window.onscroll = function() {
-		console.log('onScroll');
 		var distanceScrolled = document.documentElement.scrollTop;
+		console.log('distanceScrolled: '+distanceScrolled );
 
 		if ((distanceScrolled - scrollDistance) > 1) {
 			scrolledPastThreshold = true;
@@ -366,7 +365,7 @@
 			scrolledPastThreshold = false;
 			if (!scrolledPastThreshold && journeyShowing) {
 				document.getElementById("branch-banner-iframe").style.height = "0vh";
-					journeyShowing = true;
+				journeyShowing = false;
 				}
 		}
 	}

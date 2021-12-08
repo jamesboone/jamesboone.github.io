@@ -18,8 +18,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="362" column="61" lean-forward="false" selection-start-line="362" selection-start-column="61" selection-end-line="362" selection-end-column="61" />
+            <state relative-caret-position="291">
+              <caret line="344" column="33" lean-forward="false" selection-start-line="344" selection-start-column="33" selection-end-line="344" selection-end-column="33" />
               <folding>
                 <element signature="e#1921#1928#1" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -109,6 +109,7 @@
       <find>4J63DAL447</find>
       <find>jameswboone</find>
       <find>col-md-4</find>
+      <find>showingJourney</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/images</dir>
@@ -831,14 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gallery.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -873,10 +866,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="362" column="61" lean-forward="false" selection-start-line="362" selection-start-column="61" selection-end-line="362" selection-end-column="61" />
+        <state relative-caret-position="291">
+          <caret line="344" column="33" lean-forward="false" selection-start-line="344" selection-start-column="33" selection-end-line="344" selection-end-column="33" />
           <folding>
             <element signature="e#1921#1928#1" expanded="true" />
             <element signature="n#style#0;n#span#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

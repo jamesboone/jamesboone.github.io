@@ -336,18 +336,14 @@
    }
 </script>
 	<script>
-	// load Branch
 	(function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
-	// init Branch
 	branch.init('key_live_ao8yGfZCwKiZXO1sJ6BmhcfeuEltkwt8');
-	var scrollDistance = Math.abs(window.innerHeight - $(window).innerHeight());
 
-	// register listener on event 'willShowJourney'
-	// function for when listener event triggers
+
+	var scrollDistance = 400;
 	branch.addListener('willShowJourney', function(event, data) {
 		console.log(event, data);
-		  <!--document.getElementById("branch-banner-iframe").style.height = "0vh";-->
-		  console.log('journey hidden')
+		console.log('journey hidden')
 	})
 
 	var scrolledPastThreshold = false;
@@ -355,16 +351,21 @@
 	window.onscroll = function() {
 		console.log('onScroll');
 		var distanceScrolled = document.documentElement.scrollTop;
-		if (distanceScrolled > scrollDistance) {
+
+		if ((distanceScrolled - scrollDistance) > 1) {
 			scrolledPastThreshold = true;
+			console.log('scrolledPastThreshold:true');
+
 			if (scrolledPastThreshold && !journeyShowing) {
 				document.getElementById("branch-banner-iframe").style.height = "100vh";
+				console.log('height set');
 				journeyShowing = true;
+				console.log('journeyShowing: '+showingJourney);
 			}
-		} else if (distanceScrolled < scrollDistance) {
+		} else if ((distanceScrolled - scrollDistance) > 1) {
 			scrolledPastThreshold = false;
-				if (!scrolledPastThreshold && journeyShowing) {
-					document.getElementById("branch-banner-iframe").style.height = "0vh";
+			if (!scrolledPastThreshold && journeyShowing) {
+				document.getElementById("branch-banner-iframe").style.height = "0vh";
 					journeyShowing = true;
 				}
 		}

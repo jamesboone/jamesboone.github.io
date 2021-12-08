@@ -362,6 +362,8 @@
 				console.log('journeyShowing: '+journeyShowing);
 			}
 		} else if ((distanceScrolled - scrollDistance) < 1) {
+			console.log('distance scrolled under 400')
+			console.log('journeyShowing: '+journeyShowing);
 			scrolledPastThreshold = false;
 			if (!scrolledPastThreshold && journeyShowing) {
 				document.getElementById("branch-banner-iframe").style.height = "0vh";

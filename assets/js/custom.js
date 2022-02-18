@@ -137,13 +137,22 @@
 	    $('.nav a').each(function () {
 	        var currLink = $(this);
 	        // var refElement = $(currLink.attr("href"));
-					var refElement = $(currLink).attr("href");
-	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	            $('.nav ul li a').removeClass("active");
-	            currLink.addClass("active");
-	        }
-	        else{
-	            currLink.removeClass("active");
+					// var refElement = $(currLink).attr("href");
+	        // if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+	        //     $('.nav ul li a').removeClass("active");
+	        //     currLink.addClass("active");
+	        // }
+	        // else{
+	        //     currLink.removeClass("active");
+	        // }
+					var refElement = currLink.attr("href");
+	        var splitEle = refElement.split('#');
+
+	        if ($("#"+splitEle[1]).offset().top <= scrollPos && $("#"+splitEle[1]).offset().top + $("#"+splitEle[1]).height() > scrollPos) {
+	            $('#menu-center ul li').removeClass("active");
+	            currLink.parent().addClass("active");
+	        }else{
+	            currLink.parent().removeClass("active");
 	        }
 	    });
 	}

@@ -138,13 +138,26 @@
 	        var currLink = $(this);
 	        var refElement = $(currLink.attr("href"));
 					var temp = refElement.position();
-	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	            $('.nav ul li a').removeClass("active");
-	            currLink.addClass("active");
-	        }
-	        else{
-	            currLink.removeClass("active");
-	        }
+					try {
+						if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+		            $('.nav ul li a').removeClass("active");
+		            currLink.addClass("active");
+		        }
+		        else{
+		            currLink.removeClass("active");
+		        }
+					} catch (error) {
+  					console.error(error);
+					  // expected output: ReferenceError: nonExistentFunction is not defined
+					  // Note - error messages will vary depending on browser
+					}
+	        // if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+	        //     $('.nav ul li a').removeClass("active");
+	        //     currLink.addClass("active");
+	        // }
+	        // else{
+	        //     currLink.removeClass("active");
+	        // }
 	    });
 	}
 

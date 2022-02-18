@@ -136,28 +136,15 @@
 	    var scrollPos = $(document).scrollTop();
 	    $('.nav a').each(function () {
 	        var currLink = $(this);
-	        var refElement = $(currLink.attr("href"));
-					var temp = refElement.position();
-					try {
-						if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-		            $('.nav ul li a').removeClass("active");
-		            currLink.addClass("active");
-		        }
-		        else{
-		            currLink.removeClass("active");
-		        }
-					} catch (error) {
-  					console.log(error);
-					  // expected output: ReferenceError: nonExistentFunction is not defined
-					  // Note - error messages will vary depending on browser
-					}
-	        // if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	        //     $('.nav ul li a').removeClass("active");
-	        //     currLink.addClass("active");
-	        // }
-	        // else{
-	        //     currLink.removeClass("active");
-	        // }
+	        // var refElement = $(currLink.attr("href"));
+					var refElement = $(currLink).attr("href");
+	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+	            $('.nav ul li a').removeClass("active");
+	            currLink.addClass("active");
+	        }
+	        else{
+	            currLink.removeClass("active");
+	        }
 	    });
 	}
 

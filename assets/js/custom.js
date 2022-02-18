@@ -147,7 +147,7 @@
 		            currLink.removeClass("active");
 		        }
 					} catch (error) {
-  					console.error(error);
+  					console.log(error);
 					  // expected output: ReferenceError: nonExistentFunction is not defined
 					  // Note - error messages will vary depending on browser
 					}

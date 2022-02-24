@@ -73,9 +73,9 @@ https://templatemo.com/tm-571-hexashop
                             <li class="submenu">
                                 <a href="javascript:;">Features</a>
                                 <ul>
-                                    <li><a href="#">Features Page 1</a></li>
-                                    <li><a href="#">Features Page 2</a></li>
-                                    <li><a href="#">Features Page 3</a></li>
+                                    <li><a href="feat1">Features Page 1</a></li>
+                                    <li><a href="feat2">Features Page 2</a></li>
+                                    <li><a href="feat3">Features Page 3</a></li>
                                     <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
                                 </ul>
                             </li>
@@ -770,7 +770,7 @@ https://templatemo.com/tm-571-hexashop
                         <li><a href="#">Homepage</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Help</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -853,13 +853,13 @@ https://templatemo.com/tm-571-hexashop
     		var distanceScrolled = document.documentElement.scrollTop;
     		if ((distanceScrolled - scrollDistance) > 1) {
     			scrolledPastThreshold = true;
-    			if (scrolledPastThreshold && !journeyShowing) {
+    			if (scrolledPastThreshold && !journeyShowing && document.getElementById("branch-banner-iframe")) {
     				document.getElementById("branch-banner-iframe").style.height = "100vh";
     				journeyShowing = true;
     			}
     		} else if ((distanceScrolled - scrollDistance) < 1) {
     			scrolledPastThreshold = false;
-    			if (!scrolledPastThreshold && journeyShowing) {
+    			if (!scrolledPastThreshold && journeyShowing && document.getElementById("branch-banner-iframe")) {
     				document.getElementById("branch-banner-iframe").style.height = "0vh";
     				journeyShowing = false;
     			}

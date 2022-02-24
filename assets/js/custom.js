@@ -108,7 +108,7 @@
 	});
 
 	$(document).ready(function () {
-	    // $(document).on("scroll", onScroll);
+	     $(document).on("scroll", onScroll);
 
 	    //smoothscroll
 	    $('.scroll-to-section a[href^="#"]').on('click', function (e) {
@@ -134,26 +134,24 @@
 
 	function onScroll(event){
 	    var scrollPos = $(document).scrollTop();
-	    $('.nav a').each(function () {
-	        var currLink = $(this);
-	        // var refElement = $(currLink.attr("href"));
-					// var refElement = $(currLink).attr("href");
-	        // if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	        //     $('.nav ul li a').removeClass("active");
-	        //     currLink.addClass("active");
-	        // }
-	        // else{
-	        //     currLink.removeClass("active");
-	        // }
-					var refElement = currLink.attr("href");
-	        var splitEle = refElement.split('#');
+	    $('.nav a').not($("a:not([href*='#']")).each(function () {
 
-	        if ($("#"+splitEle[1]).offset().top <= scrollPos && $("#"+splitEle[1]).offset().top + $("#"+splitEle[1]).height() > scrollPos) {
-	            $('#menu-center ul li').removeClass("active");
-	            currLink.parent().addClass("active");
-	        }else{
-	            currLink.parent().removeClass("active");
-	        }
+//	         $(':not(:contains(#))')
+	         var currLink = $(this);
+
+	         var refElement = $(currLink.attr("href"));
+//             console.log(refElement)
+             try {
+             if (refElement.selector.includes('#') && refElement.selector.length > 1 && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+             	             $('.nav ul li a').removeClass("active");
+             	             currLink.addClass("active");
+             	         }
+             	         else{
+             	             currLink.removeClass("active");
+             	         }
+             } catch(error) {
+                console.log(error)
+             }
 	    });
 	}
 

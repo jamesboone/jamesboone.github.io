@@ -2404,7 +2404,16 @@ div#HUABAN_WIDGETS { display: none !important; }
     // init Branch
 
     branch.init('key_live_kkGffiMKsmMX4B5umosCzlkduueBt6qZ');
-		branch.setBranchViewData({data: {'$journeys_cta': 'https://branch-demo.app.link/b9Yo0swESob?ios_url=https://apps.apple.com/us/app/ulta-beauty-makeup-skincare/id561930308',}});
+		function getMobileOperatingSystem() {
+    	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    	if (/android/i.test(userAgent)) {
+					branch.setBranchViewData({data: {'$journeys_cta': 'https://branch-demo.app.link/b9Yo0swESob',}});
+			}
+    	if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+				branch.setBranchViewData({data: {'$journeys_cta': 'https://branch-demo.app.link/e/b9Yo0swESob?ios_url=https://apps.apple.com/us/app/ulta-beauty-makeup-skincare/id561930308',}});
+			}
+    	return "unknown";
+		}
 
 
   </script>

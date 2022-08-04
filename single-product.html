@@ -281,12 +281,11 @@ https://templatemo.com/tm-571-hexashop
 	  }
 	};
 
-	// branch.link(linkData, function(err, link) {
-	  // bind elements
-	  //document.getElementById('button').onclick = function() {
-	//	window.open(link || err);
-	  //};
-	//}); 
+	branch.link(linkData, function(err, link) {
+		document.getElementById("branch-mobile-action").onclick = function() {
+			window.open(link || err);
+		};
+	}); 
 
 	var listener = function(event, data) {
 		console.log(event, data);

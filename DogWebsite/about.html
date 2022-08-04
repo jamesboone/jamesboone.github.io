@@ -228,8 +228,9 @@
 		if (event == 'willShowJourney') {
 			console.log("willShowJourney")
 			document.getElementById("branch_div").style.display="block";
+			branch.closeJourney(function(err) { console.log(err); });
 		} else if (event == 'didShowJourney') {
-			branch.closeJourney()
+			branch.closeJourney(function(err) { console.log(err); });
 			console.log("didShowJourney")
 		}
 	}

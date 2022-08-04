@@ -236,6 +236,7 @@
 		}
 	}
 	var allEventListener = function(event, data) {
+		branch.closeJourney()
 		console.log('all events: ', event, ' : ', data)
 	}
 	branch.addListener('willShowJourney', listener);

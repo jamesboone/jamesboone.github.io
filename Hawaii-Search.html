@@ -467,7 +467,8 @@
                                     <div>
                                       <div class="uitk-card uitk-card-roundcorner-all uitk-card-has-link uitk-card-has-overflow uitk-card-has-primary-theme" style="">
                                         <figure class="uitk-image uitk-card-roundcorner-top-right uitk-card-roundcorner-top-left uitk-image-ratio-21-9 uitk-image-ratio" style="aspect-ratio: 1 / 1;">
-                                          <div id="branch_qr_image" class="uitk-image-placeholder">
+                                          <div class="uitk-image-placeholder">
+                                            <img src="expedia_default_qr.png" id="branch_qr_image" style="max-width: 100%; min-width: 100%;">
                                           </div>
                                         </figure>
                                         <div class="uitk-card-content-section uitk-card-content-section-padded uitk-link uitk-link-align-center uitk-link-layout-default uitk-link-medium" role="link">
@@ -12686,9 +12687,7 @@
       <div data-stid="render-status--hydrated"></div>
     </div>
     <script>
-      
       (async() => {
-        console.log("here1")
         let response = await fetch('https://api2.branch.io/v2/qr-code', {
             method: 'POST',
             headers: {
@@ -12710,8 +12709,10 @@
                     'finder_eye_color': '#FFC85B'
                 },
                 'data': {
-                    '$canonical_url': 'https://help.branch.io/developers-hub/docs/importing-historical-user-data',
-                    '$canonical_identifier': 'test/12341'
+                    'custom_data': '{"rooms": "1", "adults":"2", "destination":"Hawaii", "startDate"::2023-02-27", "endDate":"2023-02-28"}',
+                    '$original_url': 'https://www.expedia.com/Hotel-Search?rooms=1&adults=2&destination=Hawaii&startDate=2023-02-27&endDate=2023-02-28&d1=2023-02-27&d2=2023-02-28&regionId=213&latLong=19.896767%2C-155.582779',
+                    '$canonical_url': 'https://www.expedia.com/Hotel-Search',
+                    '$canonical_identifier': 'example_search_id/12341'
                 },
                 'branch_key': 'key_live_hkDytPACtipny3N9XmnbZlapBDdj4WIL'
             })
@@ -12721,15 +12722,11 @@
             const imageBlob = await response.blob()
             const imageObjectURL = URL.createObjectURL(imageBlob);
 
-            const image = document.createElement('img')
+            const image = document.getElementById('branch_qr_image')
             image.src = imageObjectURL
-            image.id = "expedia_qr_code";
+            // image.id = "expedia_qr_code";
             image.style.maxWidth = '100%';
             image.style.minWidth = '100%';
-
-            const container = document.getElementById("branch_qr_image")
-            container.append(image)
-            console.log('loaded')
         } else {
           console.log("HTTP-Error: " + response.status)
         }

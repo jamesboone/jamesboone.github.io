@@ -6,6 +6,54 @@
   <meta content="Coverstar is the safe and positive social network. No bullying or explicit content is allowed." name="description">
   <meta content="tiktok, coverstar, tiktok ban, tiktok alternative, likee, zoomerang" name="keywords">
 
+ <script type="application/javascript">
+   !(function (e, n, t, a, o, s, r, i, c) {
+      var d = o + "_q";
+      (e[o] = e[o] || {}), (e[d] = e[d] || []);
+      for (var u = 0; u < s.length; u++) r(e[o], e[d], s[u]);
+      (i = n.createElement(t)),
+         (c = n.getElementsByTagName(t)[0]),
+         (i.async = !0),
+         (i.src = "https://cdn.adjust.com/adjust-smart-banner-latest.min.js"),
+         (i.onload = function () {
+            e[o] = e[o].default;
+            for (var n = 0; n < e[d].length; n++)
+               e[o][e[d][n][0]]
+                  ? e[o][e[d][n][0]].apply(e[o], e[d][n][1])
+                  : console.error(
+                       "No such function found in " + o + ": " + e[d][n][0],
+                    );
+            e[d] = [];
+         }),
+         c.parentNode.insertBefore(i, c);
+   })(
+      window,
+      document,
+      "script",
+      0,
+      "AdjustSmartBanner",
+      [
+         "init",
+         "show",
+         "hide",
+         "setLanguage",
+         "setIosDeepLinkPath",
+         "setAndroidDeepLinkPath",
+         "setContext",
+         "setAndroidAppSchema",
+         "setDeepLinkPath",
+      ],
+      function (e, n, t) {
+         e[t] = function () {
+            n.push([t, arguments]);
+         };
+      },
+   );
+  AdjustSmartBanner.init({
+    appToken: "vkc0b01xsdfk",
+  });
+
+</script>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -1295,6 +1343,7 @@
 
   <!-- Vendor CSS Files -->
   <style>/*!
+
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
@@ -2877,54 +2926,7 @@ section {
     </div>
         
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script type="application/javascript">
-   !(function (e, n, t, a, o, s, r, i, c) {
-      var d = o + "_q";
-      (e[o] = e[o] || {}), (e[d] = e[d] || []);
-      for (var u = 0; u < s.length; u++) r(e[o], e[d], s[u]);
-      (i = n.createElement(t)),
-         (c = n.getElementsByTagName(t)[0]),
-         (i.async = !0),
-         (i.src = "https://cdn.adjust.com/adjust-smart-banner-latest.min.js"),
-         (i.onload = function () {
-            e[o] = e[o].default;
-            for (var n = 0; n < e[d].length; n++)
-               e[o][e[d][n][0]]
-                  ? e[o][e[d][n][0]].apply(e[o], e[d][n][1])
-                  : console.error(
-                       "No such function found in " + o + ": " + e[d][n][0],
-                    );
-            e[d] = [];
-         }),
-         c.parentNode.insertBefore(i, c);
-   })(
-      window,
-      document,
-      "script",
-      0,
-      "AdjustSmartBanner",
-      [
-         "init",
-         "show",
-         "hide",
-         "setLanguage",
-         "setIosDeepLinkPath",
-         "setAndroidDeepLinkPath",
-         "setContext",
-         "setAndroidAppSchema",
-         "setDeepLinkPath",
-      ],
-      function (e, n, t) {
-         e[t] = function () {
-            n.push([t, arguments]);
-         };
-      },
-   );
-  AdjustSmartBanner.init({
-    appToken: "vkc0b01xsdfk",
-  });
-
-</script>
+       
 <script>(function(){/*
 
  Copyright The Closure Library Authors.
